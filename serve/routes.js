@@ -20,8 +20,10 @@ module.exports = function (app, passport) {
     }
   });
 
-  app.get("/images", function (req, res) {
-    res.sendFile("image.jpeg");
+  app.get("/image", function (req, res) {
+    res.render("image", {
+      user: req.user,
+    });
   });
 
   app.post(
