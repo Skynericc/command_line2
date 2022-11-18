@@ -21,7 +21,7 @@ module.exports = function (app, passport) {
   });
 
   app.get("/images", function (req, res) {
-    res.sendFile("../images/image.jpeg");
+    res.sendFile("/images/image.jpeg");
   });
 
   app.post(
