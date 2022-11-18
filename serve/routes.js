@@ -72,13 +72,11 @@ module.exports = function (app, passport) {
       req.query.directory +
       "/" +
       "fichier.txt";
-    // fs.readFile(path, "utf8", function (err, items) {
-    //return list of files contained in a folder.
-    // return res.send({ value: items });
-
-    const buf = fs.readFileSync(path);
-    buf.toString(); // 'Hello, World'
-    alert(buf);
+    const buf = fs.readFile(path, "utf8", function (err, items) {
+      //return list of files contained in a folder.
+      return res.send({ value: items });
+    });
+    buf.toString();
     res.send(buf);
   });
 
