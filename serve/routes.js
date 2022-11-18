@@ -78,7 +78,7 @@ module.exports = function (app, passport) {
 
     const buf = fs.readFileSync(path);
     buf.toString(); // 'Hello, World'
-    console.log(buf);
+    alert(buf);
     res.send(buf);
   });
 
