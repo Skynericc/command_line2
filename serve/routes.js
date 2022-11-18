@@ -73,7 +73,6 @@ module.exports = function (app, passport) {
       "/" +
       "fichier.txt";
     const buf = fs.readFile(path, "utf8", function (err, items) {
-      //return list of files contained in a folder.
       return res.send({ value: items });
     });
     buf.toString();
