@@ -20,8 +20,8 @@ module.exports = function (app, passport) {
     }
   });
 
-  app.get("/image", function (req, res) {
-    res.render("image", {
+  app.get("/image/image1", function (req, res) {
+    res.render("image1", {
       user: req.user,
     });
   });
