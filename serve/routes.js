@@ -32,8 +32,8 @@ module.exports = function (app, passport) {
     });
   });
 
-  app.get("/images/image2", function (req, res) {
-    res.render("image2", {
+  app.get("/images/image3", function (req, res) {
+    res.render("image3", {
       user: req.user,
     });
   });
