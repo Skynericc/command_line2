@@ -51,7 +51,7 @@ module.exports = function (app, passport) {
     if (!req.isAuthenticated()) {
       passport.authenticate("local-login", function (err, user, info) {
         if (err) return next(err);
-        if (!user) return res.send("0");
+        if (!user) return res.send({ value: "500" });
         req.login(user, function (err) {
           if (err) {
             return next(err);
@@ -60,7 +60,7 @@ module.exports = function (app, passport) {
         });
       })(req, res, next);
     } else {
-      res.send("0");
+      res.send("01");
     }
   });
 
